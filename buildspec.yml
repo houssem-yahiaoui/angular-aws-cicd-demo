@@ -6,7 +6,7 @@ env:
     GIT_REPO: "/codebuild/angular-aws-cicd-demo/github_repo"
 phases:
   install:
-    runtime-version:
+    runtime-versions:
       nodejs: 14.x
     commands:
       - echo install process started
