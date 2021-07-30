@@ -10,7 +10,7 @@ phases:
       nodejs: 14.x
     commands:
       - echo install process started
-  pre-build:
+  pre_build:
     commands:
       - git clone $GIT_REPO APPDIR
       - cd APPDIR
@@ -20,7 +20,7 @@ phases:
       - echo build process started now
       - npm install && npm install -g @angular/cli
       - ng build --configuration=production
-  post-build:
+  post_build:
     commands:
       - echo build process finished, we should uplload to S3 now
       - cd dist/$APP_NAME
